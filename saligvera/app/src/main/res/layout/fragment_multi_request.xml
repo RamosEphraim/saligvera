@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MultiRequestFrag">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="70dp"
+        android:id="@+id/llay">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btnChooseProject"
+                android:text="No Project Selected"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project Date"
+                android:id="@+id/txtProjectDate"
+                android:textSize="13sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llay"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="Request Form"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "15dp"
+                android:gravity="left">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add new Supply"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/ic_add_circle_black_24dp"
+                    android:drawableTint="@color/colorWhite"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/btnAddSupply"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="Supply Request List"
+                android:layout_marginTop = "15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/supplyrequests"
+                android:layout_width="match_parent"
+                android:layout_height="117dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="Date Needed"
+                android:layout_marginTop = "15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_date_range_black_24dp"
+                    android:id="@+id/setDate"
+                    android:tint="@color/colorPrimaryDark"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDate"
+                    android:textSize="14sp"
+                    android:enabled="false"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Send Request"
+                android:drawableLeft="@drawable/ic_menu_send"
+                android:drawableTint="@color/colorWhite"
+                android:drawablePadding="15dp"
+                android:layout_margin="15dp"
+                android:id="@+id/btnSendRequest"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

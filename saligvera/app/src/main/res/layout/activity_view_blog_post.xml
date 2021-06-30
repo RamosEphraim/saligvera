@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_action_name"
+        android:backgroundTint="@color/colorPrimaryDark"
+        />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context="com.rysaligvera.androidapp.ViewBlogPostActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/newsthumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newsthumbnail"
+                android:padding="8dp"
+                android:text="Title"
+                android:textColor="#222"
+                android:textStyle="bold"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/news_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_title"
+                android:maxLines="3"
+                android:padding="8dp"
+                android:text="Date Created"
+                android:textColor="#666"
+                android:textSize="14dp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/news_description"
+                android:scrollbars="vertical"
+                android:orientation="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
